@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 export default function Navbar() {
   // ለተጠቃሚው ፕሮፋይል Dropdown State
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -28,11 +28,10 @@ export default function Navbar() {
           
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-400">
-            <a href="#" className="text-white hover:text-cyan-400 transition">Home</a>
-            <a href="#" className="hover:text-cyan-400 transition">Movies</a>
-            <a href="#" className="hover:text-cyan-400 transition">TV Shows</a>
-            <a href="#" className="hover:text-cyan-400 transition">Watchlist</a>
-      
+            <Link to="/" className="text-white hover:text-cyan-400 transition">Home</Link>
+            <Link to="/movies" className="hover:text-cyan-400 transition active:text-white">Movies</Link>
+            <Link to="/series" className="hover:text-cyan-400 transition">Shows</Link>
+            <Link to="/Watchlist" className="hover:text-cyan-400 transition">Watchlist</Link>
           </div>
         </div>
 
